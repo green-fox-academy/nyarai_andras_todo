@@ -1,0 +1,2 @@
+[ ]walk
+[x]walkmore
