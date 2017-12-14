@@ -21,13 +21,10 @@ main = ToDo()
 
 counting = open(str(absolute_path),'r').readlines()
 
-program_name = sys.argv[0]
-arguments = sys.argv[1:]
-count = len(arguments)
-
 commands = ['-l','-r','-a','-c','-la','-rc']
 
 if len(sys.argv) == 1 or set(commands) - set(sys.argv) == set(commands):
+    
     print('''\n
     Command Line Todo application
     =============================
@@ -46,6 +43,7 @@ if len(sys.argv) == 1 or set(commands) - set(sys.argv) == set(commands):
     \n''')
 
 if len(sys.argv) == 2:
+
     if sys.argv[-1] == '-l':
         print(main)
         if len(main.lines) == 0:
