@@ -1,9 +1,13 @@
-[ ]upddate git readme
-[ ]koch-line rotational matrix
+[ ]updategitreadme
+[ ]kochlinerotationalmatrix
 [ ]pirates
-[ ]testing links & reading
-[ ]english type
-[ ]iterative fractal / pygame
-[ ]cows and bulls
-[ ]Refactor this app
-[ ]solve to close the file with care after usage
+[ ]testing
+[ ]englishtype
+[ ]iterativefractal/pygame
+[ ]cowsandbulls
+[ ]reafactorthisapp
+[ ]solvetoclosethefilewithcareafterusage
+[ ]tryexceptioncheckinopeningfilecreatingitifnot
+[ ]la boutique
+[ ] bogi ca
+[ ] error handling
