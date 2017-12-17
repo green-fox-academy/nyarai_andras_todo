@@ -7,29 +7,28 @@ class Application(object):
 
     def __init__(self):
         self.my_files = []
-        list_file = open(str(absolute_path), "r")
+        list_file = open(str(absolute_path), "r", encoding="utf8")
         self.lines = list_file.readlines()
         for i in self.lines:
             self.my_files.append(i)
-        list_file.close()
 
     def collapse(self):
         return ' '.join(initial[2:])
 
     def add(self, iterable):
-        with open(str(absolute_path), 'a') as file:
+        with open(str(absolute_path), 'a', encoding="utf8") as file:
             file.writelines('[ ] ' + iterable +'\n')
 
     def remove(self, target_index):
-        infile = open(str(absolute_path),'r').readlines()
-        with open(str(absolute_path),'w') as outfile:
+        infile = open(str(absolute_path),'r', encoding="utf8").readlines()
+        with open(str(absolute_path),'w', encoding="utf8") as outfile:
             for index,line in enumerate(infile):
                 if index != (int(target_index))-1:
                     outfile.write(line)
     
     def complete(self, target_index):
-        infile = open(str(absolute_path),'r').readlines()
-        with open(str(absolute_path),'w') as outfile:
+        infile = open(str(absolute_path),'r', encoding="utf8").readlines()
+        with open(str(absolute_path),'w', encoding="utf8") as outfile:
             for index,line in enumerate(infile):
                 if index != (int(target_index))-1:
                     outfile.write(line)
@@ -89,6 +88,6 @@ if len(initial) >= 3:
                 print('\nremoved task at index ' + str(initial[2]))
             if initial[1] == '-c':
                 obj.complete(initial[2])
-                print('\ncompleted a task at index ' + str(initial[2]))
+                print('\ncompleted task at index ' + str(initial[2]))
         else:
             print('\nwrite a number')
